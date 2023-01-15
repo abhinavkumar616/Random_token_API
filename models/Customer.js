@@ -20,7 +20,9 @@ const CustomerSchema=new mongoose.Schema({
     },
 
     pincode:{
-        type:Number
+        type:Number,
+        minLength:[6,"pincode should be 6 digit"],
+        maxLength:[6,'pincode not be more than 6 digit']
         // required:[true,"Pincode Must required"]
     },
 
